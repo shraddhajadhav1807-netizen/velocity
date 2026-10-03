@@ -10,7 +10,7 @@ pipeline{
 		       }
 		stages{
 	          stage ("clean-wsp"){
-                  step{
+                  steps{
                      echo "cleaning wsp"
                      sh "rm -rf *"
                    
@@ -24,7 +24,7 @@ pipeline{
 				  }			  
 			   }
               stage ("delete-old-html"){
-                    step {
+                    steps{
                         sh "rm -rf /var/www/html/"
 					}
 			  }
