@@ -5,7 +5,7 @@ pipeline{
         agent {
 		       label {
 	                 label"build in"
-                     cutomerWokrspace "/mnt/project"					 
+                     cutomerWorkspace "/mnt/project"					 
 			     }
 		       }
 		stages{
