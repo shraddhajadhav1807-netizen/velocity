@@ -9,12 +9,6 @@ pipeline{
 			     }
 		       }
 		stages{
-              stage("start httpd"){
-                  steps{
-				      sh "service httpd start"
-                       sleep 5
-				  }			  
-			   }
 	         stage("stop httpd"){
                   steps{
 				      sh "service httpd stop"
@@ -35,7 +29,13 @@ pipeline{
 					  
 					  
 				  }			  
-			   }	
+			   }
+              stage("start httpd"){
+                  steps{
+				      sh "service httpd start"
+                       sleep 5
+				  }			  
+			   }
 		
 		}	   
 
