@@ -17,7 +17,7 @@ pipeline{
 			   }
               stage ("delete-old-html"){
                     steps{
-                        sh "rm -rf /var/www/html/"
+                        sh "rm -rf /var/www/html/*"
 					}
 			  }
 
