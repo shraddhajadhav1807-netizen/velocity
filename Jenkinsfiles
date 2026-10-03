@@ -9,15 +9,7 @@ pipeline{
 			     }
 		       }
 		stages{
-	          stage ("clean-wsp"){
-                  steps{
-                     echo "cleaning wsp"
-                     sh "rm -rf *"
-                   
-				  }
-       
-			  }
-			   stage("stop httpd"){
+	         stage("stop httpd"){
                   steps{
 				      sh "service httpd stop"
                        sleep 5
