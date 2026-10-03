@@ -33,6 +33,7 @@ pipeline{
               stage("start httpd"){
                   steps{
 				      sh "service httpd start"
+                      sh "httpd -t"
                        sleep 5
 				  }			  
 			   }
