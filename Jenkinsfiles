@@ -20,8 +20,9 @@ pipeline {
 
         stage("prepare html directory") {
             steps {
-                sh "mkdir -p /var/www/html"
+                sh "test -d /var/www/html"
                 sh "rm -rf /var/www/html/*"
+                sh "chmod 755 /var/www/html"
             }
         }
 
@@ -29,7 +30,8 @@ pipeline {
             steps {
                 sh "cp index.html /var/www/html/"
                 sh "cp dev.html /var/www/html/"
-                sh "chmod -R 755 /var/www/html"
+                sh "chmod 755 /var/www/html/index.html"
+                sh "chmod 755 /var/www/html/dev.html"
             }
         }
 
