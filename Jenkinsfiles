@@ -1,8 +1,6 @@
 //jenkins file for my scm repo
 //my jenkins file for deployment 
 
-/ jenkins file for my scm repo
-// my jenkins file for deployment
 pipeline {
 agent {
 label {
