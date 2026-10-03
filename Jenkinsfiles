@@ -43,5 +43,11 @@ pipeline {
             }
         }
     }
+post {
+success {
+echo "deployment done on appache httpd server"
+
+}
+}
 }
 
