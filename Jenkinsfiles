@@ -11,7 +11,7 @@ pipeline{
 		stages{
               stage("start httpd"){
                   steps{
-				      sh "service httpd stsrt"
+				      sh "service httpd start"
                        sleep 5
 				  }			  
 			   }
